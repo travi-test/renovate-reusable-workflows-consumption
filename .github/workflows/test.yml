@@ -1,0 +1,19 @@
+'on':
+    push:
+      branches:
+        - main
+        - renovate/**
+    pull_request:
+        types:
+        - opened
+        - synchronize
+
+
+permissions:
+    contents: read
+
+jobs:
+    verify:
+        runs-on: ubuntu-latest
+        steps:
+            uses: travi-test/.github/.github/workflows/reusable-test.yml@master
