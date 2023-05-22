@@ -1,3 +1,5 @@
+name: branch name as ref
+
 'on':
     push:
       branches:
